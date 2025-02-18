@@ -3,7 +3,7 @@ import Image from "next/image"
 const technologies = [
   { name: "Python", logo: "/python-logo.svg" },
   { name: "OpenAI", logo: "/openai-logo.svg" },
-  { name: "AWS Textract", logo: "/aws-textract-logo.svg" },
+  { name: "AWS", logo: "/aws-logo.svg" },
   { name: "FastAPI", logo: "/fastapi-logo.svg" },
 ]
 
@@ -12,7 +12,7 @@ export default function Technology() {
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          No es magia, es <span className="text-blue-500">ingeniería robusta</span>
+          No es magia, es <span className="text-secondary">ingeniería robusta</span>
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {technologies.map((tech) => (

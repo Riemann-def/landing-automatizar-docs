@@ -40,7 +40,7 @@ export default function RealCases() {
             </Card>
           ))}
         </div>
-        <p className="text-center mt-8 text-lg">¿Necesitas otro formato? Escríbeme y lo adapto en 24h.</p>
+        <p className="text-center mt-8 text-lg">Si necesitas un formato diferente, podemos discutirlo y encontrar la mejor solución.</p>
       </div>
     </section>
   )

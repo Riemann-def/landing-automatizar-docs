@@ -2,12 +2,12 @@ import { Mail, Database, FileText } from "lucide-react"
 
 const steps = [
   {
-    icon: <Mail className="w-8 h-8 text-blue-500" />,
+    icon: <Mail className="w-8 h-8 text-secondary" />,
     title: "Envío",
     description: "Adjunta tus documentos a un email y envíalos a procesar@markelramiro.com",
   },
   {
-    icon: <Database className="w-8 h-8 text-blue-500" />,
+    icon: <Database className="w-8 h-8 text-gray-600" />,
     title: "Procesamiento",
     description: "Nuestro sistema de IA extrae los datos clave con precisión y rapidez",
   },
