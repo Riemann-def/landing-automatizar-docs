@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colores base (modo claro) */
+    --background: 0 0% 100%;            /* Blanco */
+    --foreground: 20 14.3% 4.1%;       /* Gris oscuro para textos */
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    /* Primary: Verde lima */
+    --primary: 76 91% 58%;             /* Verde lima brillante */
+    --primary-foreground: 26 83.3% 14.1%; /* Texto oscuro sobre el verde */
+
+    /* Secondary: Naranja cálido */
+    --secondary: 28 76% 57%;
+    --secondary-foreground: 60 9.1% 97.8%; /* Texto claro sobre el naranja */
+
+    /* Ejemplo para un tercer color de acento (si lo necesitas) */
+    --accent: 28 65% 50%;             /* Otro naranja, un poco distinto */
+    --accent-foreground: 60 9.1% 97.8%;
+
+    /* Colores de apoyo */
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Colores base (modo oscuro) */
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+
+    /* Primary: Verde lima */
+    --primary: 76 91% 58%;
+    --primary-foreground: 20 14.3% 4.1%; /* O puedes dejarlo blanco si prefieres */
+
+    /* Secondary: Naranja cálido */
+    --secondary: 28 76% 57%;
+    --secondary-foreground: 60 9.1% 97.8%;
+
+    /* Accent (opcional) */
+    --accent: 28 65% 50%;
+    --accent-foreground: 60 9.1% 97.8%;
+
+    /* Colores de apoyo en dark */
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* Para crear un gradiente verde lima -> naranja cálido en texto */
+.bg-gradient-text {
+  @apply bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text;
+}
+
+/* Ligeramente agrandar al hacer hover */
+.hover-scale {
+  @apply transition-transform hover:scale-105;
+}
+
