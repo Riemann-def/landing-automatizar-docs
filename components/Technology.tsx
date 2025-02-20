@@ -21,7 +21,7 @@ export default function Technology() {
                 <Image
                   src={tech.logo || "/placeholder.svg"}
                   alt={`${tech.name} logo`}
-                  layout="fill"
+                  fill
                   objectFit="contain"
                 />
               </div>
@@ -31,9 +31,9 @@ export default function Technology() {
         </div>
         <p className="text-center text-lg">
           He optimizado modelos de IA para documentos en español, garantizando precisión y velocidad.{" "}
-          <a href="#" className="text-blue-500 hover:underline">
+          {/* <a href="#" className="text-blue-500 hover:underline">
             Ver casos técnicos →
-          </a>
+          </a> */}
         </p>
       </div>
     </section>

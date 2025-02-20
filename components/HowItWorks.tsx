@@ -4,7 +4,7 @@ const steps = [
   {
     icon: <Mail className="w-8 h-8 text-secondary" />,
     title: "Envío",
-    description: "Adjunta tus documentos a un email y envíalos a procesar@markelramiro.com",
+    description: "Adjunta tus documentos a un correo electrónico y envíalos para su procesamiento",
   },
   {
     icon: <Database className="w-8 h-8 text-gray-600" />,

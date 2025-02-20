@@ -1,7 +1,9 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
-export default function Hero() {
+export default function Hero({ openModal }: { openModal: () => void }) {
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -20,7 +22,10 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col md:flex-row gap-4">
-              <Button className="bg-primary text-primary-foreground shadow-lg hover:shadow-primary/30 transition-all">
+              <Button 
+                onClick={openModal}
+                className="bg-primary text-primary-foreground shadow-lg hover:shadow-primary/30 transition-all"
+              >
                 Probar Gratis - 20 Documentos
               </Button>
               {/* <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10">
