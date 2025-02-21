@@ -9,34 +9,39 @@ type ModalProps = {
 const documentTypes = [
   {
     type: "Factura",
-    description: "Extrae información clave como fecha, total, IVA, y conceptos.",
+    description: "Extrae información detallada de facturas incluyendo datos del cliente y artículos.",
     fields: [
+      "Número de factura",
       "Fecha de emisión",
-      "Número de factura", 
-      "Proveedor/Cliente",
-      "Base imponible",
-      "IVA",
-      "Total",
-      "Forma de pago",
+      "Datos del cliente (nombre, dirección, email)",
+      "Artículos (descripción, cantidad, precio)",
+      "Importe total",
+      "Estado del pago (pagado, pendiente, vencido)"
     ],
     email: "facturas@docs.markelramiro.com"
   },
   {
     type: "Nómina",
-    description: "Obtén detalles sobre salarios, deducciones y datos del empleado.",
-    fields: ["Periodo de nómina", "Salario base", "Complementos", "IRPF", "Seguridad Social", "Total neto", "Empresa"],
+    description: "Extrae información completa sobre salarios, deducciones y datos del empleado.",
+    fields: [
+      "Datos del empleado (nombre, ID, puesto)",
+      "Periodo de pago",
+      "Fecha de pago",
+      "Salario bruto",
+      "Deducciones detalladas",
+      "Salario neto"
+    ],
     email: "nominas@docs.markelramiro.com"
   },
   {
     type: "DNI",
-    description: "Extrae información personal del Documento Nacional de Identidad.",
+    description: "Extrae la información personal del Documento Nacional de Identidad.",
     fields: [
-      "Nombre completo",
-      "DNI/NIE",
+      "Nombre",
+      "Apellidos",
       "Fecha de nacimiento",
-      "Fecha de expedición",
-      "Fecha de validez",
-      "Nacionalidad",
+      "Número de DNI (con letra)",
+      "Fecha de validez"
     ],
     email: "dni@docs.markelramiro.com"
   },
@@ -74,7 +79,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
           {!selectedType ? (
             <>
               <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-                Seleccione el tipo de documento que desea probar
+                Seleccione el tipo de documento que desea procesar
               </p>
               <div className="grid gap-3 sm:gap-4 mb-4 sm:mb-6">
                 {documentTypes.map((doc) => (
@@ -143,7 +148,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
                     Proceso:
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-600">
-                    Recibirás un archivo Excel con todos los datos extraídos en un plazo máximo de 5 minutos. Los
+                    Recibirás los datos extraídos en un formato estructurado en un plazo máximo de 5 minutos. Los
                     documentos se procesarán de forma segura y confidencial.
                   </p>
                 </div>

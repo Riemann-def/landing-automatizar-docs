@@ -11,9 +11,12 @@ export default function Technology() {
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          No es magia, es <span className="text-secondary">ingeniería robusta</span>
-        </h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        No es magia, es <span className="relative inline-block">
+          <span className="bg-primary absolute inset-0 h-full w-full bottom-0"></span>
+          <span className="relative">ingeniería robusta</span>
+        </span>
+      </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {technologies.map((tech) => (
             <div key={tech.name} className="flex flex-col items-center">
@@ -22,7 +25,7 @@ export default function Technology() {
                   src={tech.logo || "/placeholder.svg"}
                   alt={`${tech.name} logo`}
                   fill
-                  objectFit="contain"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <p className="text-center font-semibold">{tech.name}</p>

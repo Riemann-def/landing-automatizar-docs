@@ -8,7 +8,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Automatiza con Markel Ramiro",
   description: "Envía documentos. Recibe datos. Así de simple.",
-    generator: 'v0.dev'
+  icons: {
+    icon: '/favicon.ico',
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({
