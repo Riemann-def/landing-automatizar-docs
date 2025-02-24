@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Automatiza con Markel Ramiro",
-  description: "Envía documentos. Recibe datos. Así de simple.",
+  description: "Automatiza el procesamiento de documentos con IA avanzada. Envía facturas, nóminas y más, y recibe datos estructurados de manera rápida y segura.",
   icons: {
     icon: '/favicon.ico',
   },
