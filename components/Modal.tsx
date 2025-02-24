@@ -22,7 +22,7 @@ const documentTypes = [
     email: "facturas@docs.markelramiro.com"
   },
   {
-    type: "Nómina",
+    type: "Nomina",
     description: "Extrae información completa sobre salarios, deducciones y datos del empleado.",
     fields: [
       "Datos del empleado (nombre, ID, puesto)",
